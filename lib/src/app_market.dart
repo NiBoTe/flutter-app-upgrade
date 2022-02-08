@@ -1,7 +1,6 @@
 ///
 /// des:
 ///
-
 class AppMarket {
   ///
   /// 获取所有内置的应用商店的包名
@@ -28,13 +27,13 @@ class AppMarket {
   }
 
   static AppMarketInfo getBuildInMarket(String packageName) {
-    AppMarketInfo _info;
+    AppMarketInfo? _info;
     buildInMarketList.forEach((f) {
       if (f.packageName == packageName) {
         _info = f;
       }
     });
-    return _info;
+    return _info!;
   }
 
   ///
